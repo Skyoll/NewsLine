@@ -5,9 +5,10 @@
     <title>Новости</title>
 </head>
 <body>
-<?php foreach ($news as $item) :?>
-    <a target="_blank" href="/detail/?id=<?= $item[0]?>"><?= $item[1]?></a><br/>
-<?php endforeach;;?>
 
+<?php foreach ($news as $a):?>gi
+    <a target="_blank" href="/detail/?id=<?= $a[0]?>"><?= $a[1] .'<br/>' . $a[2]?></a><br/>
+<?//   var_dump($news); die();
+endforeach;;?>
 </body>
 </html>
