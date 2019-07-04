@@ -35,3 +35,5 @@ function dbQuery($sql) {
     }
     return $mass;
 }
+
+
