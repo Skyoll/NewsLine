@@ -6,18 +6,15 @@
 </head>
 <body>
 <h3>Добавить комментарий</h3>
-<form action="" id="News" method="post">
+<form action="/addArticleAction.php" id="News" method="post">
     <p>
         <label>Название новости</label>
-        <input name="NameNews" id="NameNews" value=" " type="text" size="30" alt="Name" required /><br/>
+        <input name="title" id="NameNews" value=" " type="text" size="30" alt="title" required /><br/>
         <label>Новость</label><br/>
-        <textarea name="TextNews" id="TextNews" rows="10" cols="45" required></textarea>
+        <textarea name="text" id="TextNews" rows="10" cols="45" required></textarea>
         <br />
         <input class="button" type="submit" value="Добавить" />
     </p>
 </form>
 </body>
 </html>
-<?php
-var_dump($_POST);
-?>

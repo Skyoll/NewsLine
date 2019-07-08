@@ -36,4 +36,14 @@ function dbQuery($sql) {
     return $mass;
 }
 
+/* Функция выполняющая произвольный запрос*/
+function dbExec($sql){
+    $mysqli = dbIn();
+    $res = $mysqli->query($sql);
+    if (!$res) {
+        return false;
+    }
+    return true;
+}
+
 

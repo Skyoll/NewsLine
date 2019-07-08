@@ -8,8 +8,4 @@ $news = getNews();
 //echo '<pre>';
 
 require __DIR__ . '/view/news.php';
-
 require __DIR__ . '/view/form.php';
-
-require __DIR__ . '/detail/addNewsDb.php';
-
