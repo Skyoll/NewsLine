@@ -5,6 +5,13 @@
     <title>Новости</title>
 </head>
 <body>
-<?= $article[1] . $article[2] . $article[3]?>
+
+<p><?= $article[1] ?></p><br/>
+<img src="<?= $article[2] ?>" width="189" height="255">
+<br/>
+
+<p><?= $article[3] ?></p><br/>
+
+
 </body>
 </html>

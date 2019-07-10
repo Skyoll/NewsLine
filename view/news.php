@@ -6,12 +6,16 @@
 </head>
 <body>
 
-<?php foreach ($news as $a):?>
-    <a target="_blank" href="/detail/?id=<?= $a[0]?>"><?= $a[1]?></a><br/>
-    <a href=href="/detail/?id=<?= $a[0]?>"><?= $a[2]?></a><br/>
-    <img src= "<?= $a[2]?>" width="189" height="255" alt="lorem"></a><br/>
-    <a target="_blank" href="/detail/?id=<?= $a[0]?>"><?= $a[3]?></a><br/>
-<?//   var_dump($news); die();
-endforeach;;?>
+<?php foreach ($news as $article):?>
+
+    <a target="_blank" href="/detail/?id=<?= $article[0]?>"><?= $article[1]?></a><br/>
+
+    <a target="_blank" href="/detail/?id=<?= $article[0]?>">
+        <img src= "<?= $article[2]?>" width="189" height="255">
+    </a><br/>
+
+    <p><?= $article[3]?></p><br/>
+
+<?php endforeach;;?>
 </body>
 </html>
