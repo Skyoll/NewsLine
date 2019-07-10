@@ -6,15 +6,15 @@
 </head>
 <body>
 <h3>Добавить комментарий</h3>
-<form action="/addArticleAction.php" id="News" method="post">
-    <p>
+<form action="/addArticleAction.php" enctype="multipart/form-data" method="post">
         <label>Название новости</label>
-        <input name="title" id="NameNews" value=" " type="text" size="30" alt="title" required /><br/>
+        <input name="title" type="text"/><br/><br/>
+        <label>Загрузка фотографии</label><br/><br/>
+        <input type="file" name="image"><br/><br/>
         <label>Новость</label><br/>
-        <textarea name="text" id="TextNews" rows="10" cols="45" required></textarea>
+        <textarea name="text" rows="10" cols="45" required></textarea>
         <br />
-        <input class="button" type="submit" value="Добавить" />
-    </p>
+        <input  type="submit" value="Добавить" />
 </form>
 </body>
 </html>

@@ -5,6 +5,6 @@
     <title>Новости</title>
 </head>
 <body>
-<?= $article[1] . $article[2]?>
+<?= $article[1] . $article[2] . $article[3]?>
 </body>
 </html>

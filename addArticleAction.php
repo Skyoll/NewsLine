@@ -1,17 +1,23 @@
 <?php
 require __DIR__ . '/functions/news.php';
 
-$NewsName = strip_tags($_POST ['title']);
-$TextNews = strip_tags($_POST ['text']);
+$NewsName = strip_tags($_POST['title']);
+$TextNews = strip_tags($_POST['text']);
+$file = $_FILES['image'];
 
-if (!empty($TextNews) && !empty($NewsName)) {
+$imagePath = '/images/' . $file['name'];
 
-    $res = addArticle($NewsName, $TextNews);
+$imageUploadResult = uploadImage($file);
+
+if (!empty($TextNews) && !empty($NewsName) && $imageUploadResult) {
+
+    $res = addArticle($NewsName, $imagePath, $TextNews);
 
     if (!$res) {
         echo 'ошибка <a href="/">вернуться на главную</a>';
     }else{
         echo 'Новость успешно добавлена <a href="/">вернуться на главную</a>';
+
     }
 }
 
