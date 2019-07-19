@@ -1,5 +1,8 @@
 <?php
-require __DIR__ . '/functions/news.php';
+require __DIR__ . '/classes/Articles.php';
+require __DIR__ . '/db/Db.php';
+
+$adbArticle = new Articles(new Db());
 
 $NewsName = strip_tags($_POST['title']);
 $TextNews = strip_tags($_POST['text']);
@@ -7,11 +10,11 @@ $file = $_FILES['image'];
 
 $imagePath = '/images/' . $file['name'];
 
-$imageUploadResult = uploadImage($file);
+$imageUploadResult = $adbArticle->uploadImage($file);
 
 if (!empty($TextNews) && !empty($NewsName) && $imageUploadResult) {
 
-    $res = addArticle($NewsName, $imagePath, $TextNews);
+    $res = $adbArticle->addArticle($NewsName, $imagePath, $TextNews);
 
     if (!$res) {
         echo 'ошибка <a href="/">вернуться на главную</a>';
