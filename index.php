@@ -242,4 +242,3 @@
 //    return preg_replace('/\s/', '_', implode($requestedArr));
 //}
 //echo translitReplaceSpaces('Объединить две ранее написанные функции в одну');
-//
